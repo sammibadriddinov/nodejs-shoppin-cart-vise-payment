@@ -1,0 +1,48 @@
+{
+  "mens": [
+    {
+      "id": 1,
+      "name": "Mens Cotton Jacket",
+      "price": 1299,
+      "imgName": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mens Casual Premium ",
+      "price": 1599,
+      "imgName": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mens Casual Slim Fit",
+      "price": 1799,
+      "imgName": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Mens Casual Slim Fit",
+      "price": 1799,
+      "imgName": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    }
+  ],
+  "women": [
+    {
+      "id": 5,
+      "name": "Rain Jacket Women Windbreaker ",
+      "price": 2599,
+      "imgName": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Opna Women's Short Sleeve Moisture",
+      "price": 3699,
+      "imgName": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+    },
+    {
+      "id": 7,
+      "name": "MBJ Women's Solid Short Sleeve ",
+      "price": 2999,
+      "imgName": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+    }
+  ]
+}

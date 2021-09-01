@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+      var stripePublicKey = "<%= stripePublicKey %>";
+    </script>
+    <script src="store.js" defer></script>
+    <title>Sammi Shop</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-content d-flex container">
+          <div class="left">
+            <span class="subtitle">GET YOUR SPRING COLLECTION</span>
+            <h1 class="title">
+              Up to
+              <span class="color"
+                >90% <br />
+                Discount</span
+              >
+              on This <br />
+              Christmas Days
+            </h1>
+
+            <h5>From 20th Dec to 31st Dec</h5>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+
+          <div class="right">
+            <img src="./img/bg.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section">
+      <div class="title">
+        <h1>Men & Women <span>Products</span></h1>
+      </div>
+      <div class="product-center container shop-item">
+        <% data.mens.forEach(function(item){ %>
+        <div class="product shop-item" data-item-id="<%= item.id %> ">
+          <div class="img-cover">
+            <img class="shop-item-image" src="<%= item.imgName %>" alt="" />
+          </div>
+          <p class="shop-item-title"><%= item.name %></p>
+          <div class="shop-item-details">
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <div class="price shop-item-price">$<%= item.price %></div>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        <% }) %> <% data.women.forEach(function(item){ %>
+        <div class="product shop-item" data-item-id="<%= item.id %> ">
+          <div class="img-cover">
+            <img class="shop-item-image" src="<%= item.imgName %>" alt="" />
+          </div>
+          <p class="shop-item-title"><%= item.name %></p>
+          <div class="shop-item-details">
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bx-star"></i>
+            </div>
+            <div class="price shop-item-price">$<%= item.price %></div>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">
+        PURCHASE
+      </button>
+    </section>
+  </body>
+</html>
